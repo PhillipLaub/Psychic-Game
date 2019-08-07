@@ -1,6 +1,11 @@
 h1 {
     color:purple;
     font-size:60px;
+    padding:30px;
+}
+
+p {
+    padding-top:10px;
 }
 
 body {
@@ -24,7 +29,7 @@ body {
 }
 
 #topSpace {
-    margin-top:8%;
+    margin-top:5%;
 }
 
 .blur {
