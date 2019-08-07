@@ -31,34 +31,51 @@ document.onkeyup = function (event) {
 
     console.log("The computer chose " + computerGuess);
 
-    userGuess = event.key;
+    userGuess = event.key.toLowerCase();
     guessesMade.push(userGuess);
+    
 
-    if (userGuess === computerGuess) {
-        wins++;
-        triesRemaining = 10;
-        guessesMade = [];
-        alert("You Won!");
-        pickRand();
-    }
-
-    if (computerGuess != userGuess) {
-        triesRemaining--;
-    }
-
-    if (triesRemaining === 0) {
-        losses++;
-        triesRemaining = 10;
-        guessesMade = [];
-        alert("You Lost!");
-        pickRand();
-    }
+//Need to check if userGuess is contained in guesses made, entries are already stored there with push
+//if userGuess = any index within guesses made, don't decrease tries remaining
+//only run program if userGuess = an index from computer choices
+//
+if (computerChoices.indexOf(userGuess) == -1) {
+    alert("Um..that's not a letter...(sigh)");
+}
 
 
-    userChoiceText.textContent = "You chose: ";
-    userChoiceText.append(guessesMade + " ");
-    winsText.textContent = "Wins: " + wins;
-    lossesText.textContent = "Losses: " + losses;
-    triesText.textContent = "Tries Remaining: " + triesRemaining;
+if (computerChoices.indexOf(userGuess) > -1) {
 
+
+
+        if (userGuess === computerGuess) {
+            wins++;
+            triesRemaining = 10;
+            guessesMade = [];
+            alert("You Won!");
+            pickRand();
+        }
+    
+        if (computerGuess != userGuess) {
+            triesRemaining--;
+        }
+    
+        if (triesRemaining === 0) {
+            losses++;
+            triesRemaining = 10;
+            guessesMade = [];
+            alert("You Lost!");
+            pickRand();
+        }
+        
+    
+        userChoiceText.textContent = "You chose: ";
+        userChoiceText.append(guessesMade + " ");
+        winsText.textContent = "Wins: " + wins;
+        lossesText.textContent = "Losses: " + losses;
+        triesText.textContent = "Tries Remaining: " + triesRemaining;
+    
+
+    
+}
 };
