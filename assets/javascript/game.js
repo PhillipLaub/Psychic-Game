@@ -39,8 +39,19 @@ document.onkeyup = function (event) {
 //if userGuess = any index within guesses made, don't decrease tries remaining
 //only run program if userGuess = an index from computer choices
 //
+
+let duplicate  = function(event) {
+    for (let k=0; k < guessesMade.length; k++) {
+        if (userGuess = guessesMade[k]) {
+            
+        }
+    }
+}
+
+
 if (computerChoices.indexOf(userGuess) == -1) {
     alert("Um..that's not a letter...(sigh)");
+    
 }
 
 
