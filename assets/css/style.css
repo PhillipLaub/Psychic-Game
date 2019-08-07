@@ -3,6 +3,13 @@ h1 {
 }
 
 body {
-    background-image: url("/assets/images/background.jpg");
     text-align: center;
+    background-image: url("");
+}
+
+.container {
+    border: 1px solid black;
+    color:white;
+    background: black;
+    opacity:0.9;
 }

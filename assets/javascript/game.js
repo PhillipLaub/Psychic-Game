@@ -4,7 +4,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 // Creating variables to hold the number of wins, losses, and ties. They start at 0.
 var wins = 0;
 var losses = 0;
-var triesRemaining = 9;
+var triesRemaining = 10;
 var guessesMade = [];
 var userGuess = document.onkeyup;
 var computerGuess;
@@ -36,7 +36,7 @@ document.onkeyup = function (event) {
 
     if (userGuess === computerGuess) {
         wins++;
-        triesRemaining = 9;
+        triesRemaining = 10;
         guessesMade = [];
         alert("You Won!");
         pickRand();
@@ -46,9 +46,9 @@ document.onkeyup = function (event) {
         triesRemaining--;
     }
 
-    if (triesRemaining === -1) {
+    if (triesRemaining === 0) {
         losses++;
-        triesRemaining = 9;
+        triesRemaining = 10;
         guessesMade = [];
         alert("You Lost!");
         pickRand();
