@@ -9,11 +9,13 @@
     incorrect keys do not count against tries remaining. 
 
 - Why the project is useful
+
     The project is useful to teach the use of arrays, structuring multiple files (i.e. HTML, CSS, Javascript, and multiple asset folders)
     Gain familiarity with the use of getElementById, textContent, indexOf, etc.
 
 
 - How users can get started with the project
+
     Start by getting the file format setup properly, pseudo code each small problem that needs to be solved.
     Create your layout with containers for each piece of information in your HTML file.
     Link all of your files, to make sure they are communicating together.
@@ -21,8 +23,10 @@
     Once functional, start styling the page with your CSS file.
 
  - Where users can get help with your project
+
     Lots of resources are available online. Research the different tools that you will need if you are unfamiliar with the different functionality.
     Stackoverflow has lots of help, also github has many similar projects that can provide ideas of how to get started, or help if you get stuck.
 
 - Who maintains and contributes to the project
+
     This project is maintained and contributed 100% by Phillip Laub.
