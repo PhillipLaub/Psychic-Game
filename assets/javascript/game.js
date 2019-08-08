@@ -32,30 +32,25 @@ document.onkeyup = function (event) {
     console.log("The computer chose " + computerGuess);
 
     userGuess = event.key.toLowerCase();
-    guessesMade.push(userGuess);
-    
 
-//Need to check if userGuess is contained in guesses made, entries are already stored there with push
-//if userGuess = any index within guesses made, don't decrease tries remaining
-//only run program if userGuess = an index from computer choices
-//
-
-let duplicate  = function(event) {
-    for (let k=0; k < guessesMade.length; k++) {
-        if (userGuess = guessesMade[k]) {
-            
-        }
+    if ( guessesMade.indexOf(userGuess)  > -1 ){
+        return;
     }
-}
-
-
-if (computerChoices.indexOf(userGuess) == -1) {
-    alert("Um..that's not a letter...(sigh)");
     
-}
+
+    // if this execute, this means the user guess was unique 
+    guessesMade.push(userGuess);
 
 
-if (computerChoices.indexOf(userGuess) > -1) {
+    if (computerChoices.indexOf(userGuess) == -1) {
+        alert("Um..that's not a letter...(sigh)");
+
+    }
+
+
+
+
+    else if (computerChoices.indexOf(userGuess) > -1) {
 
 
 
@@ -66,11 +61,11 @@ if (computerChoices.indexOf(userGuess) > -1) {
             alert("You Won!");
             pickRand();
         }
-    
+
         if (computerGuess != userGuess) {
             triesRemaining--;
         }
-    
+
         if (triesRemaining === 0) {
             losses++;
             triesRemaining = 10;
@@ -78,15 +73,15 @@ if (computerChoices.indexOf(userGuess) > -1) {
             alert("You Lost!");
             pickRand();
         }
-        
-    
+
+
         userChoiceText.textContent = "You chose: ";
         userChoiceText.append(guessesMade + " ");
         winsText.textContent = "Wins: " + wins;
         lossesText.textContent = "Losses: " + losses;
         triesText.textContent = "Tries Remaining: " + triesRemaining;
-    
 
-    
-}
+
+
+    }
 };
