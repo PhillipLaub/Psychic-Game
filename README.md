@@ -2,6 +2,8 @@
 
 ## Link to Deployed Project - (https://philliplaub.github.io/Psychic-Game)
 
+![Game Screenshot](./assets/images/psychicgame.png)
+
 ## What the project does
 
   *  The computer will pick a random letter from the alphabet, the user must press a key to guess which letter the computer chose. 
