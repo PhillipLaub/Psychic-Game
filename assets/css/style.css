@@ -12,6 +12,20 @@ body {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     background-image: url("../images/background.jpg");
+
+    /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
 }
 
 .container {
@@ -30,6 +44,7 @@ body {
 
 #topSpace {
     margin-top:5%;
+    width:80vh;
 }
 
 .blur {
@@ -67,6 +82,40 @@ body {
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  /* MEDIA QUERIES */
+
+  @media screen and (max-width: 980px) {
+       body {
+         width:960px;
+       }
+
+       html {
+        width:960px;
+      }
+       
+
+  
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      width:768px;
+    }
+    html {
+      width:768px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 640px) {
+    body {
+      width:640px;
+    }
+    html {
+      width:640px;
     }
   }
   
