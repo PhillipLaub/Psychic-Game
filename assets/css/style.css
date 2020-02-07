@@ -1,121 +1,161 @@
-h1 {
-    color:purple;
-    font-size:60px;
-    padding:30px;
-}
-
-p {
-    padding-top:10px;
-}
 
 body {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    background-image: url("../images/background.jpg");
-
-    /* Background image is centered vertically and horizontally at all times */
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  background-image: url("../images/background.jpg");
   background-position: center center;
-  
-  /* Background image doesn't tile */
   background-repeat: no-repeat;
-  
-  /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
   background-attachment: fixed;
-  
-  /* This is what makes the background image rescale based
-     on the container's size */
   background-size: cover;
 }
 
 .container {
-    border: 1px solid black;
-    color:white;
-    background: black;
-    opacity:0.8;
-    margin-bottom: 10px;
-    background-image: url("../images/background3.jpg");
-    
+  border: 5px solid white;
+  border-radius:5%;
+  color: white;
+  background: black;
+  opacity: 0.8;
+  background-image: url("../images/background3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top:5%;
+  padding:2%;
+}
+
+h1 {
+  color: purple;
+  font-size:225%;
+  padding:4%;
+}
+
+p {
+  padding:2%;
 }
 
 .row {
-    margin-bottom:20px;
-}
-
-#topSpace {
-    margin-top:5%;
-    width:80vh;
+  margin:2%;
+  background:black;
+  opacity: .9;
+  border-radius:10%;
 }
 
 .blur {
-    -webkit-box-shadow: 0px 0px 28px 19px rgba(112,58,255,0.69); 
-    box-shadow: 0px 0px 28px 19px rgba(112,58,255,0.69);
-   
-    }
+  -webkit-box-shadow: 0px 0px 28px 19px rgba(112, 58, 255, 0.69);
+  box-shadow: 0px 0px 28px 19px rgba(112, 58, 255, 0.69);
+}
 
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
 
+/* 
+p {
+  padding-top: 10px;
+}
+
+
+
+
+.row {
+  margin-bottom: 20px;
+}
+
+#topSpace {
+  margin-top: 5%;
+  width: 80vh;
+}
+
+.blur {
+  -webkit-box-shadow: 0px 0px 28px 19px rgba(112, 58, 255, 0.69);
+  box-shadow: 0px 0px 28px 19px rgba(112, 58, 255, 0.69);
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
 @-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
   }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    width: 960px;
   }
 
-  /* MEDIA QUERIES */
-
-  @media screen and (max-width: 980px) {
-       body {
-         width:960px;
-       }
-
-       html {
-        width:960px;
-      }
-       
-
-  
+  html {
+    width: 960px;
   }
-  
-  @media screen and (max-width: 768px) {
-    body {
-      width:768px;
-    }
-    html {
-      width:768px;
-    }
-    
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 768px;
   }
-  
-  @media screen and (max-width: 640px) {
-    body {
-      width:640px;
-    }
-    html {
-      width:640px;
-    }
+  html {
+    width: 768px;
   }
-  
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    width: 640px;
+  }
+  html {
+    width: 640px;
+  }
+} */
